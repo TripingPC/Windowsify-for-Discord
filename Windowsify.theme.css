@@ -1,0 +1,54 @@
+//META{"name":"Windowsify","description":"Add Windows 10-like window borders to Discord, compatible with every theme that doesn't dare touch the titlebar.","author":"TripingPC","version":"1.0"}*// 
+
+:root{
+    --window-color: #7289DA
+}
+
+div.win-buttons.win-buttons-light{
+    border-right:1px var(--window-color) solid;
+    height:32px;
+    right:1px;
+    padding-right:-1px;
+}
+
+#app-mount > div > div.titlebar{
+    background:var(--window-color);
+    height: 32px;
+    border: 1px var(--window-color) solid;
+    border-bottom:none;
+}
+
+#app-mount > div > div:nth-child(2) > div > div > section > div.chat.flex-vertical.flex-spacer{
+    padding-top:32px!important;
+}
+
+div.flex-vertical.channels-wrap{
+    padding-top:32px!important;
+}
+
+div.guilds-wrapper > div{
+    padding-top:48px!important;
+}
+
+.app{
+    border: 1px var(--window-color) solid;
+    box-sizing:border-box;
+}
+.header-toolbar{
+    content-align:right;
+    margin-right:-100px;
+}
+
+div.win-buttons.win-buttons-light > button.win-close{background-image:url(https://i.imgur.com/Qlibu8G.png);}
+div.win-buttons.win-buttons-light > button.win-maximize{background-image:url(https://i.imgur.com/GissnX0.png);}
+div.win-buttons.win-buttons-light > button.win-minimize{background-image:url(https://i.imgur.com/WnAZjW4.png);}
+
+div.win-buttons.win-buttons-light > button{
+    margin-right:13.5px;
+    opacity:1!important;
+    -webkit-opacity:1!important;
+}
+
+div.win-buttons.win-buttons-light > button:hover{
+    background-color:rgba(255,255,255,0.2);
+}
